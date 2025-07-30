@@ -1,22 +1,15 @@
 <div class="layout layout--row layout--center">
   <div class="meal-grid">
-    <!-- Header row -->
-    <div class="grid-header">
-      <div class="grid-cell">Breakfast</div>
-      <div class="grid-cell">Lunch</div>
-      <div class="grid-cell">Kid Lunch</div>
-      <div class="grid-cell">Dinner</div>
-    </div>
-
-    <!-- Meal row -->
+    <!-- top row -->
     <div class="grid-row">
       <div class="grid-cell">{{today.Breakfast | default: ""}}</div>
       <div class="grid-cell">{{today.Lunch | default: ""}}</div>
-      <div class="grid-cell">{{today.KidLunch | default: ""}}</div>
-      <div class="grid-cell">{{today.Dinner | default: ""}}</div>
-
     </div>
-
+    <!-- bottom row -->
+    <div class="grid-row">
+      <div class="grid-cell">{{today.Dinner | default: ""}}</div>
+      <div class="grid-cell">{{today.KidLunch | default: ""}}</div>
+    </div>
   </div>
 </div>
 
@@ -25,10 +18,10 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .meal-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1px;
     border: 1px solid #ccc;
     width: 100%;

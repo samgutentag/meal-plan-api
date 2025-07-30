@@ -1,20 +1,35 @@
 <div class="layout layout--row layout--center">
   <div class="meal-grid">
-    <!-- Header row -->
+    <!-- Breakfast row -->
     <div class="grid-header">
       <div class="grid-cell">Breakfast</div>
-      <div class="grid-cell">Lunch</div>
-      <div class="grid-cell">Kid Lunch</div>
-      <div class="grid-cell">Dinner</div>
     </div>
-
-    <!-- Breakfast row -->
     <div class="grid-row">
       <div class="grid-cell">{{today.Breakfast | default: ""}}</div>
-      <div class="grid-cell">{{today.Lunch | default: ""}}</div>
-      <div class="grid-cell">{{today.KidLunch | default: ""}}</div>
-      <div class="grid-cell">{{today.Dinner | default: ""}}</div>
+    </div>
 
+    <!-- Lunch row -->
+    <div class="grid-header">
+      <div class="grid-cell">Lunch</div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell">{{today.Lunch | default: ""}}</div>
+    </div>
+
+    <!-- Kid Lunch row -->
+    <div class="grid-header">
+      <div class="grid-cell">Kid Lunch</div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell">{{today.KidLunch | default: ""}}</div>
+    </div>
+
+    <!-- Dinner row -->
+    <div class="grid-header">
+      <div class="grid-cell">Dinner</div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell">{{today.Dinner | default: ""}}</div>
     </div>
 
   </div>
@@ -28,7 +43,7 @@
   
   .meal-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1px;
     border: 1px solid #ccc;
     width: 100%;
@@ -73,5 +88,5 @@
 <div class="title_bar">
   <img class="image" src="https://usetrmnl.com/images/plugins/trmnl--render.svg">
   <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
-  <span class="instance">{{trmnl.plugin_settings.polling_url}}</span>
+  <span class="instance">{{today.TodayDate | default: "Today"}}</span>
 </div>
