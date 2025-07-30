@@ -111,8 +111,25 @@ if __name__ == "__main__":
         data = fetch_meals()
         # Sort the data by day index (0-6) to ensure proper order
         sorted_data = dict(sorted(data.items(), key=lambda x: x[0]))
+
+        # Get today's meal data
+        today = datetime.now()
+        days_since_monday = today.weekday()
+        today_meals = sorted_data.get(
+            days_since_monday,
+            {
+                "Breakfast": "",
+                "KidLunch": "",
+                "Lunch": "",
+                "Dinner": "",
+            },
+        )
+
+        # Add today's meals to the output
+        output_data = {"today": today_meals, **sorted_data}
+
         with open("meals.json", "w") as f:
-            json.dump(sorted_data, f, indent=2)
+            json.dump(output_data, f, indent=2)
         print("Successfully processed meals and saved to meals.json")
     except Exception as e:
         print(f"Error: {e}")
