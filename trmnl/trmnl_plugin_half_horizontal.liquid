@@ -1,0 +1,77 @@
+<div class="layout layout--row layout--center">
+  <div class="meal-grid">
+    <!-- Header row -->
+    <div class="grid-header">
+      <div class="grid-cell">Breakfast</div>
+      <div class="grid-cell">Lunch</div>
+      <div class="grid-cell">Kid Lunch</div>
+      <div class="grid-cell">Dinner</div>
+    </div>
+
+    <!-- Breakfast row -->
+    <div class="grid-row">
+      <div class="grid-cell">{{today.Breakfast | default: ""}}</div>
+      <div class="grid-cell">{{today.Lunch | default: ""}}</div>
+      <div class="grid-cell">{{today.KidLunch | default: ""}}</div>
+      <div class="grid-cell">{{today.Dinner | default: ""}}</div>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .layout {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .meal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-header {
+    display: contents;
+  }
+
+  .grid-header .grid-cell {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .grid-row {
+    display: contents;
+  }
+
+  .grid-cell {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid-row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .grid-row:nth-child(odd) {
+    background-color: #ffffff;
+  }
+</style>
+
+<div class="title_bar">
+  <img class="image" src="https://usetrmnl.com/images/plugins/trmnl--render.svg">
+  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
+  <span class="instance">{{trmnl.plugin_settings.polling_url}}</span>
+</div>
