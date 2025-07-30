@@ -125,6 +125,9 @@ if __name__ == "__main__":
             },
         )
 
+        # Add today's date to the meals data
+        today_meals["TodayDate"] = today.strftime("%B %d, %Y")
+
         # Add today's meals to the output
         output_data = {"today": today_meals, **sorted_data}
 
