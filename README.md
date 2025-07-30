@@ -36,6 +36,13 @@ The script generates a `meals.json` file with the following structure:
 
 ```json
 {
+  "today": {
+    "Breakfast": "",
+    "KidLunch": "SunButter Energy Bites",
+    "Lunch": "Crispy Cabbage Pancakes",
+    "Dinner": "Chicken Tikka Masala",
+    "TodayDate": "December 15, 2024"
+  },
   "0": {
     "Breakfast": "",
     "KidLunch": "SunButter Energy Bites",
@@ -51,6 +58,16 @@ The script generates a `meals.json` file with the following structure:
   // ... continues for days 2-6
 }
 ```
+
+### Today Key
+
+The `"today"` key contains meal information for the current day only, including:
+
+- `Breakfast`: Breakfast meal for today
+- `KidLunch`: Kid's lunch for today
+- `Lunch`: Lunch meal for today
+- `Dinner`: Dinner meal for today
+- `TodayDate`: Formatted date string (e.g., "December 15, 2024")
 
 ### Day Mapping
 
@@ -83,6 +100,28 @@ Your API will be available at:
 ### Alternative Hosting
 
 You can also serve the `meals.json` file using other static hosting services:
+
+## TRMNL E-Ink Display Layouts
+
+The `trmnl/` directory contains layout files designed for use with e-ink displays from [usetrmnl.com](https://usetrmnl.com). These Liquid template files provide different visual layouts for displaying meal plan data on e-ink screens.
+
+### Available Layouts
+
+- `trmnl_plugin.liquid`: Full week view with meal types as rows and days as columns
+- Additional layout files may be available for different display configurations
+
+### Usage with TRMNL
+
+1. Configure your TRMNL device to point to your meal plan API endpoint
+2. Select the appropriate layout file based on your display preferences
+3. The layouts will automatically fetch and display the meal data from your API
+
+### Layout Features
+
+- Responsive grid layouts optimized for e-ink displays
+- Automatic data binding to meal plan JSON structure
+- Support for both full week view and today-only views
+- Clean, readable typography for e-ink screens
 
 ## Environment Variables
 
