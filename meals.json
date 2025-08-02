@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "Bagels",
-    "KidLunch": "SunButter Energy Bites",
-    "Lunch": "Vegetable Fried Rice",
-    "Dinner": "Dutch Oven Chili",
-    "TodayDate": "August 01, 2025"
+    "KidLunch": "",
+    "Lunch": "",
+    "Dinner": "Vegetable Fried Rice",
+    "TodayDate": "August 02, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
@@ -34,14 +34,14 @@
     "Breakfast": "Bagels",
     "KidLunch": "SunButter Energy Bites",
     "Lunch": "Vegetable Fried Rice",
-    "Dinner": "Dutch Oven Chili",
-    "TodayDate": "August 01, 2025"
+    "Dinner": "Dutch Oven Chili"
   },
   "5": {
     "Breakfast": "Bagels",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Vegetable Fried Rice"
+    "Dinner": "Vegetable Fried Rice",
+    "TodayDate": "August 02, 2025"
   },
   "6": {
     "Breakfast": "",
