@@ -3,36 +3,36 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "",
+    "Dinner": "Vegetable Fried Rice",
     "TodayDate": "August 03, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
-    "KidLunch": "SunButter Energy Bites",
+    "KidLunch": "",
     "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "Chicken Tikka Masala"
   },
   "1": {
     "Breakfast": "Bagels",
-    "KidLunch": "Mama French Toast",
+    "KidLunch": "",
     "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "Chicken Tikka Masala"
   },
   "2": {
     "Breakfast": "Bagels",
-    "KidLunch": "SunButter Energy Bites",
+    "KidLunch": "",
     "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "Dutch Oven Chili"
   },
   "3": {
     "Breakfast": "Bagels",
-    "KidLunch": "Mama French Toast",
+    "KidLunch": "",
     "Lunch": "Breakfast Burritos",
     "Dinner": "Dutch Oven Chili"
   },
   "4": {
     "Breakfast": "Bagels",
-    "KidLunch": "SunButter Energy Bites",
+    "KidLunch": "",
     "Lunch": "Vegetable Fried Rice",
     "Dinner": "Dutch Oven Chili"
   },
@@ -46,7 +46,7 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "",
+    "Dinner": "Vegetable Fried Rice",
     "TodayDate": "August 03, 2025"
   }
 }
