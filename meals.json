@@ -1,10 +1,10 @@
 {
   "today": {
-    "Breakfast": "Bagels",
+    "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Vegetable Fried Rice",
-    "TodayDate": "August 02, 2025"
+    "Dinner": "",
+    "TodayDate": "August 03, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
@@ -40,13 +40,13 @@
     "Breakfast": "Bagels",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Vegetable Fried Rice",
-    "TodayDate": "August 02, 2025"
+    "Dinner": "Vegetable Fried Rice"
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "",
+    "TodayDate": "August 03, 2025"
   }
 }
