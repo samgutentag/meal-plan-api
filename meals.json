@@ -1,52 +1,52 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "Vegetable Fried Rice",
-    "TodayDate": "August 03, 2025"
+    "KidLunch": "Mini Pancakes",
+    "Lunch": "Breakfast Burritos",
+    "Dinner": "Slow Cooker Vegetarian Curry",
+    "TodayDate": "August 04, 2025"
   },
   "0": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Crispy Cabbage Pancakes",
-    "Dinner": "Chicken Tikka Masala"
+    "Breakfast": "",
+    "KidLunch": "Mini Pancakes",
+    "Lunch": "Breakfast Burritos",
+    "Dinner": "Slow Cooker Vegetarian Curry",
+    "TodayDate": "August 04, 2025"
   },
   "1": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Crispy Cabbage Pancakes",
-    "Dinner": "Chicken Tikka Masala"
+    "Breakfast": "",
+    "KidLunch": "Ruby - Quesadilla",
+    "Lunch": "Tuna Melt",
+    "Dinner": "Slow Cooker Vegetarian Curry"
   },
   "2": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Crispy Cabbage Pancakes",
-    "Dinner": "Dutch Oven Chili"
+    "Breakfast": "",
+    "KidLunch": "Mini Pancakes",
+    "Lunch": "Tuna Melt",
+    "Dinner": "Slow Cooker Vegetarian Curry"
   },
   "3": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Breakfast Burritos",
-    "Dinner": "Dutch Oven Chili"
+    "Breakfast": "",
+    "KidLunch": "Ruby - Quesadilla",
+    "Lunch": "Tuna Melt, Tuna Melt",
+    "Dinner": "Harvest Chicken Casserole"
   },
   "4": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Vegetable Fried Rice",
-    "Dinner": "Dutch Oven Chili"
+    "Breakfast": "",
+    "KidLunch": "Mini Pancakes",
+    "Lunch": "Skyline",
+    "Dinner": "Harvest Chicken Casserole"
   },
   "5": {
-    "Breakfast": "Bagels",
+    "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Vegetable Fried Rice"
+    "Dinner": "Harvest Chicken Casserole"
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Vegetable Fried Rice",
-    "TodayDate": "August 03, 2025"
+    "Dinner": ""
   }
 }
