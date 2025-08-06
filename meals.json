@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "Ruby - Quesadilla",
+    "KidLunch": "Mini Pancakes",
     "Lunch": "Tuna Melt",
     "Dinner": "Slow Cooker Vegetarian Curry",
-    "TodayDate": "August 05, 2025"
+    "TodayDate": "August 06, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -16,14 +16,14 @@
     "Breakfast": "",
     "KidLunch": "Ruby - Quesadilla",
     "Lunch": "Tuna Melt",
-    "Dinner": "Slow Cooker Vegetarian Curry",
-    "TodayDate": "August 05, 2025"
+    "Dinner": "Slow Cooker Vegetarian Curry"
   },
   "2": {
     "Breakfast": "",
     "KidLunch": "Mini Pancakes",
     "Lunch": "Tuna Melt",
-    "Dinner": "Slow Cooker Vegetarian Curry"
+    "Dinner": "Slow Cooker Vegetarian Curry",
+    "TodayDate": "August 06, 2025"
   },
   "3": {
     "Breakfast": "",
