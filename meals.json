@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "Ruby - Quesadilla",
-    "Lunch": "Tuna Melt, Tuna Melt",
+    "KidLunch": "Mini Pancakes",
+    "Lunch": "Skyline",
     "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 07, 2025"
+    "TodayDate": "August 08, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -28,14 +28,14 @@
     "Breakfast": "",
     "KidLunch": "Ruby - Quesadilla",
     "Lunch": "Tuna Melt, Tuna Melt",
-    "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 07, 2025"
+    "Dinner": "Harvest Chicken Casserole"
   },
   "4": {
     "Breakfast": "",
     "KidLunch": "Mini Pancakes",
     "Lunch": "Skyline",
-    "Dinner": "Harvest Chicken Casserole"
+    "Dinner": "Harvest Chicken Casserole",
+    "TodayDate": "August 08, 2025"
   },
   "5": {
     "Breakfast": "",
