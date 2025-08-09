@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "Mini Pancakes",
-    "Lunch": "Skyline",
+    "KidLunch": "",
+    "Lunch": "",
     "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 08, 2025"
+    "TodayDate": "August 09, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -34,14 +34,14 @@
     "Breakfast": "",
     "KidLunch": "Mini Pancakes",
     "Lunch": "Skyline",
-    "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 08, 2025"
+    "Dinner": "Harvest Chicken Casserole"
   },
   "5": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Harvest Chicken Casserole"
+    "Dinner": "Harvest Chicken Casserole",
+    "TodayDate": "August 09, 2025"
   },
   "6": {
     "Breakfast": "",
