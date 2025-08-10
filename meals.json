@@ -3,8 +3,8 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 09, 2025"
+    "Dinner": "",
+    "TodayDate": "August 10, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -40,13 +40,13 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "Harvest Chicken Casserole",
-    "TodayDate": "August 09, 2025"
+    "Dinner": "Harvest Chicken Casserole"
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "",
+    "TodayDate": "August 10, 2025"
   }
 }
