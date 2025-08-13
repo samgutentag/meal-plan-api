@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "PB&J",
-    "Lunch": "Breakfast Burritos",
-    "Dinner": "Slow Cooker Tuscan Sausage Soup",
-    "TodayDate": "August 12, 2025"
+    "KidLunch": "Quick English Muffin Pizzas",
+    "Lunch": "Chicken Salad Pita",
+    "Dinner": "Slow Cooker Tuscan Sausage Soup, Costco Rustic Bread",
+    "TodayDate": "August 13, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -16,14 +16,14 @@
     "Breakfast": "",
     "KidLunch": "PB&J",
     "Lunch": "Breakfast Burritos",
-    "Dinner": "Slow Cooker Tuscan Sausage Soup",
-    "TodayDate": "August 12, 2025"
+    "Dinner": "Slow Cooker Tuscan Sausage Soup"
   },
   "2": {
     "Breakfast": "",
     "KidLunch": "Quick English Muffin Pizzas",
     "Lunch": "Chicken Salad Pita",
-    "Dinner": "Slow Cooker Tuscan Sausage Soup, Costco Rustic Bread"
+    "Dinner": "Slow Cooker Tuscan Sausage Soup, Costco Rustic Bread",
+    "TodayDate": "August 13, 2025"
   },
   "3": {
     "Breakfast": "",
