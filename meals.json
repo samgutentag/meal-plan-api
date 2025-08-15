@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "PB&J",
-    "Lunch": "Chicken Salad Pita",
-    "Dinner": "Takeout",
-    "TodayDate": "August 14, 2025"
+    "KidLunch": "Spinach and Banana Muffins",
+    "Lunch": "In N Out",
+    "Dinner": "Takeout Leftovers",
+    "TodayDate": "August 15, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -28,14 +28,14 @@
     "Breakfast": "",
     "KidLunch": "PB&J",
     "Lunch": "Chicken Salad Pita",
-    "Dinner": "Takeout",
-    "TodayDate": "August 14, 2025"
+    "Dinner": "Takeout"
   },
   "4": {
     "Breakfast": "",
     "KidLunch": "Spinach and Banana Muffins",
     "Lunch": "In N Out",
-    "Dinner": "Takeout Leftovers"
+    "Dinner": "Takeout Leftovers",
+    "TodayDate": "August 15, 2025"
   },
   "5": {
     "Breakfast": "",
