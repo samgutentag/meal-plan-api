@@ -4,7 +4,7 @@
     "KidLunch": "",
     "Lunch": "",
     "Dinner": "",
-    "TodayDate": "August 16, 2025"
+    "TodayDate": "August 17, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -40,13 +40,13 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "August 16, 2025"
+    "Dinner": ""
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "",
+    "TodayDate": "August 17, 2025"
   }
 }
