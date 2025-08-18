@@ -1,40 +1,41 @@
 {
   "today": {
-    "Breakfast": "",
+    "Breakfast": "Bagels",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "August 17, 2025"
+    "Lunch": "Turkey Panini",
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls",
+    "TodayDate": "August 18, 2025"
   },
   "0": {
-    "Breakfast": "",
-    "KidLunch": "Quick English Muffin Pizzas",
-    "Lunch": "Baked Potatoes w/Chili",
-    "Dinner": "Harvest Chicken Casserole"
+    "Breakfast": "Bagels",
+    "KidLunch": "",
+    "Lunch": "Turkey Panini",
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls",
+    "TodayDate": "August 18, 2025"
   },
   "1": {
-    "Breakfast": "",
-    "KidLunch": "PB&J",
-    "Lunch": "Breakfast Burritos",
-    "Dinner": "Slow Cooker Tuscan Sausage Soup"
+    "Breakfast": "Bagels",
+    "KidLunch": "Quick English Muffin Pizzas",
+    "Lunch": "Turkey Panini",
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
   },
   "2": {
-    "Breakfast": "",
-    "KidLunch": "Quick English Muffin Pizzas",
-    "Lunch": "Chicken Salad Pita",
-    "Dinner": "Slow Cooker Tuscan Sausage Soup, Costco Rustic Bread"
+    "Breakfast": "Bagels",
+    "KidLunch": "",
+    "Lunch": "Turkey Panini",
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
   },
   "3": {
-    "Breakfast": "",
-    "KidLunch": "PB&J",
-    "Lunch": "Chicken Salad Pita",
-    "Dinner": "Takeout"
+    "Breakfast": "Bagels",
+    "KidLunch": "",
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
   },
   "4": {
     "Breakfast": "",
-    "KidLunch": "Spinach and Banana Muffins",
-    "Lunch": "In N Out",
-    "Dinner": "Takeout Leftovers"
+    "KidLunch": "",
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
   },
   "5": {
     "Breakfast": "",
@@ -46,7 +47,6 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "August 17, 2025"
+    "Dinner": ""
   }
 }
