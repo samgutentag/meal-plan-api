@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "Bagels",
-    "KidLunch": "Quick English Muffin Pizzas",
+    "KidLunch": "",
     "Lunch": "Turkey Panini",
     "Dinner": "Spicy Chipotle Honey Salmon Bowls",
-    "TodayDate": "August 19, 2025"
+    "TodayDate": "August 20, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
@@ -16,14 +16,14 @@
     "Breakfast": "Bagels",
     "KidLunch": "Quick English Muffin Pizzas",
     "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls",
-    "TodayDate": "August 19, 2025"
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
   },
   "2": {
     "Breakfast": "Bagels",
     "KidLunch": "",
     "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls",
+    "TodayDate": "August 20, 2025"
   },
   "3": {
     "Breakfast": "Bagels",
