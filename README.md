@@ -2,6 +2,8 @@
 
 A simple API that fetches meal planning data from a Google Calendar ICS feed and serves it as JSON.
 
+Checkout this weeks Menu at the endpoint [https://samgutentag.github.io/meal-plan-api/meals.json](https://samgutentag.github.io/meal-plan-api/meals.json)
+
 ## Features
 
 - Fetches meal data from Google Calendar ICS feed
