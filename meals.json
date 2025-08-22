@@ -1,10 +1,10 @@
 {
   "today": {
-    "Breakfast": "Bagels",
-    "KidLunch": "Quick English Muffin Pizzas",
+    "Breakfast": "",
+    "KidLunch": "Spinach and Banana Muffins",
     "Lunch": "Loaded Baked Potato",
     "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
-    "TodayDate": "August 21, 2025"
+    "TodayDate": "August 22, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
@@ -28,14 +28,14 @@
     "Breakfast": "Bagels",
     "KidLunch": "Quick English Muffin Pizzas",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
-    "TodayDate": "August 21, 2025"
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
   },
   "4": {
     "Breakfast": "",
     "KidLunch": "Spinach and Banana Muffins",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
+    "TodayDate": "August 22, 2025"
   },
   "5": {
     "Breakfast": "",
