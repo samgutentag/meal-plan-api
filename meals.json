@@ -2,25 +2,25 @@
   "today": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "",
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
     "TodayDate": "August 23, 2025"
   },
   "0": {
-    "Breakfast": "Bagels",
-    "KidLunch": "Spinach and Banana Muffins",
-    "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
-  },
-  "1": {
     "Breakfast": "Bagels",
     "KidLunch": "",
     "Lunch": "Turkey Panini",
     "Dinner": "Spicy Chipotle Honey Salmon Bowls"
   },
+  "1": {
+    "Breakfast": "Bagels",
+    "KidLunch": "Quick English Muffin Pizzas",
+    "Lunch": "Turkey Panini",
+    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
+  },
   "2": {
     "Breakfast": "Bagels",
-    "KidLunch": "Spinach and Banana Muffins",
+    "KidLunch": "",
     "Lunch": "Turkey Panini",
     "Dinner": "Spicy Chipotle Honey Salmon Bowls"
   },
@@ -39,14 +39,14 @@
   "5": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "",
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
     "TodayDate": "August 23, 2025"
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": ""
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Takeout or Costco Meal"
   }
 }
