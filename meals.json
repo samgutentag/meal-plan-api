@@ -3,8 +3,8 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
-    "TodayDate": "August 23, 2025"
+    "Dinner": "Takeout or Costco Meal",
+    "TodayDate": "August 24, 2025"
   },
   "0": {
     "Breakfast": "Bagels",
@@ -40,13 +40,13 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta",
-    "TodayDate": "August 23, 2025"
+    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Takeout or Costco Meal"
+    "Dinner": "Takeout or Costco Meal",
+    "TodayDate": "August 24, 2025"
   }
 }
