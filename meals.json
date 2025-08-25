@@ -1,52 +1,52 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "",
+    "KidLunch": "SunButter Energy Bites",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Takeout or Costco Meal",
-    "TodayDate": "August 24, 2025"
+    "Dinner": "Egg Roll Bowls 3\ufe0f\u20e3",
+    "TodayDate": "August 25, 2025"
   },
   "0": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
+    "Breakfast": "",
+    "KidLunch": "SunButter Energy Bites",
+    "Lunch": "Loaded Baked Potato",
+    "Dinner": "Egg Roll Bowls 3\ufe0f\u20e3",
+    "TodayDate": "August 25, 2025"
   },
   "1": {
-    "Breakfast": "Bagels",
-    "KidLunch": "Quick English Muffin Pizzas",
-    "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
+    "Breakfast": "",
+    "KidLunch": "Mama French Toast",
+    "Lunch": "Lox Bagels",
+    "Dinner": "Egg Roll Bowls 3\ufe0f\u20e3"
   },
   "2": {
-    "Breakfast": "Bagels",
-    "KidLunch": "",
-    "Lunch": "Turkey Panini",
-    "Dinner": "Spicy Chipotle Honey Salmon Bowls"
+    "Breakfast": "",
+    "KidLunch": "SunButter Energy Bites",
+    "Lunch": "Lox Bagels",
+    "Dinner": "Egg Roll Bowls 3\ufe0f\u20e3"
   },
   "3": {
-    "Breakfast": "Bagels",
-    "KidLunch": "Quick English Muffin Pizzas",
-    "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
+    "Breakfast": "",
+    "KidLunch": "Mama French Toast",
+    "Lunch": "Lox Bagels",
+    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
   },
   "4": {
     "Breakfast": "",
-    "KidLunch": "Spinach and Banana Muffins",
-    "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
+    "KidLunch": "SunButter Energy Bites",
+    "Lunch": "Skyline",
+    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
   },
   "5": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Loaded Baked Potato",
-    "Dinner": "Roasted Zucchini, Squash and Tomatoes, Carbone Spicy Vodka Pasta"
+    "Lunch": "",
+    "Dinner": ""
   },
   "6": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Loaded Baked Potato",
-    "Dinner": "Takeout or Costco Meal",
-    "TodayDate": "August 24, 2025"
+    "Lunch": "",
+    "Dinner": ""
   }
 }
