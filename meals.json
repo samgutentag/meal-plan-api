@@ -1,23 +1,23 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "SunButter Energy Bites",
-    "Lunch": "Loaded Baked Potato",
+    "KidLunch": "Mama French Toast",
+    "Lunch": "Lox Bagels",
     "Dinner": "Egg Roll Bowls",
-    "TodayDate": "August 25, 2025"
+    "TodayDate": "August 26, 2025"
   },
   "0": {
     "Breakfast": "",
     "KidLunch": "SunButter Energy Bites",
     "Lunch": "Loaded Baked Potato",
-    "Dinner": "Egg Roll Bowls",
-    "TodayDate": "August 25, 2025"
+    "Dinner": "Egg Roll Bowls"
   },
   "1": {
     "Breakfast": "",
     "KidLunch": "Mama French Toast",
     "Lunch": "Lox Bagels",
-    "Dinner": "Egg Roll Bowls"
+    "Dinner": "Egg Roll Bowls",
+    "TodayDate": "August 26, 2025"
   },
   "2": {
     "Breakfast": "",
