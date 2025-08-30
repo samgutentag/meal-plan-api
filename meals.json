@@ -1,10 +1,10 @@
 {
   "today": {
     "Breakfast": "",
-    "KidLunch": "SunButter Energy Bites",
-    "Lunch": "Skyline",
-    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon",
-    "TodayDate": "August 29, 2025"
+    "KidLunch": "",
+    "Lunch": "",
+    "Dinner": "",
+    "TodayDate": "August 30, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -34,14 +34,14 @@
     "Breakfast": "",
     "KidLunch": "SunButter Energy Bites",
     "Lunch": "Skyline",
-    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon",
-    "TodayDate": "August 29, 2025"
+    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
   },
   "5": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "",
+    "TodayDate": "August 30, 2025"
   },
   "6": {
     "Breakfast": "",
