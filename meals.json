@@ -1,32 +1,32 @@
 {
   "today": {
-    "Breakfast": "",
+    "Breakfast": "Aebleskivers + Little Smokies",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "August 30, 2025"
+    "Lunch": "Avocado Toast",
+    "Dinner": "Meat Spaghetti",
+    "TodayDate": "August 31, 2025"
   },
   "0": {
     "Breakfast": "",
-    "KidLunch": "SunButter Energy Bites",
+    "KidLunch": "",
     "Lunch": "Loaded Baked Potato",
     "Dinner": "Egg Roll Bowls"
   },
   "1": {
     "Breakfast": "",
-    "KidLunch": "Mama French Toast",
+    "KidLunch": "",
     "Lunch": "Lox Bagels",
     "Dinner": "Egg Roll Bowls"
   },
   "2": {
     "Breakfast": "",
-    "KidLunch": "SunButter Energy Bites",
+    "KidLunch": "",
     "Lunch": "Lox Bagels",
     "Dinner": "Egg Roll Bowls"
   },
   "3": {
     "Breakfast": "",
-    "KidLunch": "Mama French Toast",
+    "KidLunch": "",
     "Lunch": "Lox Bagels",
     "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
   },
@@ -39,14 +39,14 @@
   "5": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "August 30, 2025"
+    "Lunch": "Avocado Toast",
+    "Dinner": "_Recurring Items"
   },
   "6": {
-    "Breakfast": "",
+    "Breakfast": "Aebleskivers + Little Smokies",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": ""
+    "Lunch": "Avocado Toast",
+    "Dinner": "Meat Spaghetti",
+    "TodayDate": "August 31, 2025"
   }
 }
