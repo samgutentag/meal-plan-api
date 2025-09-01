@@ -1,52 +1,52 @@
 {
   "today": {
-    "Breakfast": "Aebleskivers + Little Smokies",
+    "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Avocado Toast",
-    "Dinner": "Meat Spaghetti",
-    "TodayDate": "August 31, 2025"
+    "Lunch": "Bagel & Egg Sandwiches",
+    "Dinner": "Chicken Tikka Masala",
+    "TodayDate": "September 01, 2025"
   },
   "0": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Loaded Baked Potato",
-    "Dinner": "Egg Roll Bowls"
+    "Lunch": "Bagel & Egg Sandwiches",
+    "Dinner": "Chicken Tikka Masala",
+    "TodayDate": "September 01, 2025"
   },
   "1": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Lox Bagels",
-    "Dinner": "Egg Roll Bowls"
+    "Lunch": "Skyline",
+    "Dinner": "Chicken Tikka Masala"
   },
   "2": {
     "Breakfast": "",
-    "KidLunch": "",
-    "Lunch": "Lox Bagels",
-    "Dinner": "Egg Roll Bowls"
+    "KidLunch": "Fruit, Belvita Bites, Perfect Bar, Ruby Bar, Cheese",
+    "Lunch": "Fruit, Belvita Bites, Perfect Bar, Ruby Bar, Cheese",
+    "Dinner": ""
   },
   "3": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Lox Bagels",
-    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
+    "Lunch": "",
+    "Dinner": ""
   },
   "4": {
     "Breakfast": "",
-    "KidLunch": "SunButter Energy Bites",
-    "Lunch": "Skyline",
-    "Dinner": "Crockpot Potato Soup, Roasted Broccoli with Bacon"
+    "KidLunch": "",
+    "Lunch": "",
+    "Dinner": ""
   },
   "5": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Avocado Toast",
-    "Dinner": "_Recurring Items"
+    "Lunch": "",
+    "Dinner": ""
   },
   "6": {
-    "Breakfast": "Aebleskivers + Little Smokies",
+    "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Avocado Toast",
-    "Dinner": "Meat Spaghetti",
-    "TodayDate": "August 31, 2025"
+    "Lunch": "",
+    "Dinner": ""
   }
 }
