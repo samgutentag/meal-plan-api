@@ -2,22 +2,22 @@
   "today": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Bagel & Egg Sandwiches",
+    "Lunch": "Skyline",
     "Dinner": "Chicken Tikka Masala",
-    "TodayDate": "September 01, 2025"
+    "TodayDate": "September 02, 2025"
   },
   "0": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Bagel & Egg Sandwiches",
-    "Dinner": "Chicken Tikka Masala",
-    "TodayDate": "September 01, 2025"
+    "Dinner": "Chicken Tikka Masala"
   },
   "1": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Skyline",
-    "Dinner": "Chicken Tikka Masala"
+    "Dinner": "Chicken Tikka Masala",
+    "TodayDate": "September 02, 2025"
   },
   "2": {
     "Breakfast": "",
