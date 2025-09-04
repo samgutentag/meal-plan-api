@@ -2,9 +2,9 @@
   "today": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Out of town",
+    "Lunch": "",
     "Dinner": "",
-    "TodayDate": "September 03, 2025"
+    "TodayDate": "September 04, 2025"
   },
   "0": {
     "Breakfast": "",
@@ -22,14 +22,14 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "Out of town",
-    "Dinner": "",
-    "TodayDate": "September 03, 2025"
+    "Dinner": ""
   },
   "3": {
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "",
+    "TodayDate": "September 04, 2025"
   },
   "4": {
     "Breakfast": "",
