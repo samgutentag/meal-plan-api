@@ -4,24 +4,25 @@
     "KidLunch": "",
     "Lunch": "",
     "Dinner": "",
-    "TodayDate": "September 07, 2025"
+    "TodayDate": "September 08, 2025"
   },
   "0": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Bagel & Egg Sandwiches",
-    "Dinner": "Chicken Tikka Masala"
+    "Lunch": "",
+    "Dinner": "",
+    "TodayDate": "September 08, 2025"
   },
   "1": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Skyline",
-    "Dinner": "Chicken Tikka Masala"
+    "Lunch": "",
+    "Dinner": ""
   },
   "2": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "Out of town",
+    "Lunch": "",
     "Dinner": ""
   },
   "3": {
@@ -46,7 +47,6 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": "",
-    "TodayDate": "September 07, 2025"
+    "Dinner": ""
   }
 }
