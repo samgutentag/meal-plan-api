@@ -2,7 +2,7 @@
   "today": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
+    "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "",
     "TodayDate": "September 10, 2025"
   },
@@ -16,32 +16,32 @@
     "Breakfast": "",
     "KidLunch": "",
     "Lunch": "",
-    "Dinner": ""
+    "Dinner": "_Recurring Items"
   },
   "2": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
+    "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "",
     "TodayDate": "September 10, 2025"
   },
   "3": {
     "Breakfast": "",
-    "KidLunch": "",
-    "Lunch": "",
-    "Dinner": ""
+    "KidLunch": "Healthy Banana Muffins",
+    "Lunch": "Crispy Cabbage Pancakes",
+    "Dinner": "Chicken Tikka Masala"
   },
   "4": {
     "Breakfast": "",
-    "KidLunch": "",
-    "Lunch": "",
-    "Dinner": ""
+    "KidLunch": "Healthy Banana Muffins",
+    "Lunch": "Crispy Cabbage Pancakes",
+    "Dinner": "Chicken Tikka Masala"
   },
   "5": {
     "Breakfast": "",
     "KidLunch": "",
-    "Lunch": "",
-    "Dinner": ""
+    "Lunch": "Bagel & Egg Sandwiches",
+    "Dinner": "Chicken Tikka Masala"
   },
   "6": {
     "Breakfast": "",
