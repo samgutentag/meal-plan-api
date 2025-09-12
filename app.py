@@ -8,10 +8,17 @@ import pytz
 
 load_dotenv()
 
+
 # Replace with your public Google Calendar .ics URL
 ICAL_URL = os.getenv("ICAL_URL")
 if not ICAL_URL:
     raise ValueError("ICAL_URL environment variable not set")
+
+# GitHub Gist configuration
+GIST_TOKEN = os.getenv("GIST_TOKEN")
+GIST_ID = os.getenv("GIST_ID")  # Optional: if set, update this gist; else, create new
+if not GIST_TOKEN:
+    raise ValueError("GIST_TOKEN environment variable not set")
 
 
 def get_current_week_dates():
@@ -50,7 +57,7 @@ def closest_meal(hour):
 def fetch_meals():
     print(f"Fetching calendar from: {ICAL_URL}")
 
-    r = requests.get(ICAL_URL)
+    r = requests.get(ICAL_URL, timeout=10)
 
     # Check if the request was successful
     if r.status_code != 200:
@@ -106,6 +113,37 @@ def fetch_meals():
     return meals_by_day
 
 
+def write_to_gist(data, token, gist_id=None):
+    """Create or update a GitHub Gist with the given data as meals.json"""
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github+json",
+    }
+    gist_api = "https://api.github.com/gists"
+    payload = {
+        "files": {"meals.json": {"content": json.dumps(data, indent=2)}},
+        "description": "Weekly meal plan data",
+        "public": False,
+    }
+    if gist_id:
+        # Update existing gist
+        url = f"{gist_api}/{gist_id}"
+        resp = requests.patch(url, headers=headers, json=payload, timeout=10)
+    else:
+        # Create new gist
+        url = gist_api
+        resp = requests.post(url, headers=headers, json=payload, timeout=10)
+    if resp.status_code not in (200, 201):
+        print(f"Error writing to Gist: HTTP {resp.status_code}")
+        print(f"Response: {resp.text}")
+        raise Exception(f"Failed to write to Gist: HTTP {resp.status_code}")
+    gist_url = resp.json().get("html_url")
+    print(f"Successfully wrote meals to Gist: {gist_url}")
+    if not gist_id:
+        print(f"New Gist ID: {resp.json().get('id')}")
+    return gist_url
+
+
 if __name__ == "__main__":
     try:
         data = fetch_meals()
@@ -131,9 +169,8 @@ if __name__ == "__main__":
         # Add today's meals to the output
         output_data = {"today": today_meals, **sorted_data}
 
-        with open("meals.json", "w") as f:
-            json.dump(output_data, f, indent=2)
-        print("Successfully processed meals and saved to meals.json")
+        # Write to GitHub Gist instead of local file
+        write_to_gist(output_data, GIST_TOKEN, GIST_ID)
     except Exception as e:
         print(f"Error: {e}")
         exit(1)
