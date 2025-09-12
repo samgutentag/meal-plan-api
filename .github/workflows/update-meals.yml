@@ -1,79 +1,42 @@
-name: Update Meals Gist
+name: Update Meals
 
 on:
   schedule:
+    # Run every 12 hours at 5 minutes past the hour
     - cron: "5 */12 * * *"
-  workflow_dispatch:
+  workflow_dispatch: # Allow manual runs
 
 permissions:
-  contents: read
-  gists: write
+  contents: write
 
 jobs:
-  update-gist:
+  update-meals:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      - run: |
+      - name: Install dependencies
+        run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Generate meals data
+      - name: Run meal planning script
         env:
           ICAL_URL: ${{ secrets.ICAL_URL }}
         run: python app.py
 
-      - name: Create/Update Gist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIST_ID: ${{ vars.GIST_ID }}
+      - name: Commit and push changes
         run: |
-          echo "Checking if meals.json exists..."
-          ls -la meals.json
-
-          echo "Content of meals.json:"
-          cat meals.json
-
-          CONTENT=$(cat meals.json | jq -c . | jq -R .)
-          echo "Prepared content: $CONTENT"
-
-          if [ -n "$GIST_ID" ]; then
-            echo "Updating existing gist: $GIST_ID"
-            RESPONSE=$(curl -s -w "HTTP_CODE:%{http_code}" -X PATCH \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/gists/$GIST_ID" \
-              -d "{\"files\":{\"meals.json\":{\"content\":$CONTENT}}}")
-            echo "Update response: $RESPONSE"
-          else
-            echo "Creating new gist..."
-            RESPONSE=$(curl -s -w "HTTP_CODE:%{http_code}" -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/gists" \
-              -d "{\"public\":true,\"files\":{\"meals.json\":{\"content\":$CONTENT}}}")
-            
-            echo "Create response: $RESPONSE"
-            
-            # Extract HTTP code and response body
-            HTTP_CODE=$(echo "$RESPONSE" | grep -o "HTTP_CODE:[0-9]*" | cut -d: -f2)
-            BODY=$(echo "$RESPONSE" | sed 's/HTTP_CODE:[0-9]*$//')
-            
-            echo "HTTP Code: $HTTP_CODE"
-            echo "Response Body: $BODY"
-            
-            if [ "$HTTP_CODE" = "201" ]; then
-              NEW_GIST_ID=$(echo "$BODY" | jq -r .id)
-              RAW_URL=$(echo "$BODY" | jq -r '.files."meals.json".raw_url')
-              echo "✅ Success! New Gist ID: $NEW_GIST_ID"
-              echo "✅ Raw URL: $RAW_URL"
-              echo "💡 Set GIST_ID variable to: $NEW_GIST_ID"
-            else
-              echo "❌ Failed with HTTP $HTTP_CODE"
-              echo "Error details: $BODY"
-            fi
-          fi
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add meals.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update meals.json [skip ci]"
