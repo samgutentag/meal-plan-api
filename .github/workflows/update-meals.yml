@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: read
-  gists: write
 
 jobs:
   update-gist:
@@ -31,7 +30,7 @@ jobs:
 
       - name: Create/Update Gist
         env:
-          GITHUB_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIST_ID: ${{ vars.GIST_ID }}
         run: |
           CONTENT=$(cat meals.json | jq -c . | jq -R .)
