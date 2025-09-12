@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  gists: write
 
 jobs:
   update-gist:
@@ -33,21 +34,46 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIST_ID: ${{ vars.GIST_ID }}
         run: |
+          echo "Checking if meals.json exists..."
+          ls -la meals.json
+
+          echo "Content of meals.json:"
+          cat meals.json
+
           CONTENT=$(cat meals.json | jq -c . | jq -R .)
+          echo "Prepared content: $CONTENT"
 
           if [ -n "$GIST_ID" ]; then
-            # Update existing gist
-            curl -X PATCH \
+            echo "Updating existing gist: $GIST_ID"
+            RESPONSE=$(curl -s -w "HTTP_CODE:%{http_code}" -X PATCH \
               -H "Authorization: token $GITHUB_TOKEN" \
               "https://api.github.com/gists/$GIST_ID" \
-              -d "{\"files\":{\"meals.json\":{\"content\":$CONTENT}}}"
+              -d "{\"files\":{\"meals.json\":{\"content\":$CONTENT}}}")
+            echo "Update response: $RESPONSE"
           else
-            # Create new gist
-            RESPONSE=$(curl -X POST \
+            echo "Creating new gist..."
+            RESPONSE=$(curl -s -w "HTTP_CODE:%{http_code}" -X POST \
               -H "Authorization: token $GITHUB_TOKEN" \
               "https://api.github.com/gists" \
               -d "{\"public\":true,\"files\":{\"meals.json\":{\"content\":$CONTENT}}}")
             
-            echo "New Gist ID: $(echo "$RESPONSE" | jq -r .id)"
-            echo "Raw URL: $(echo "$RESPONSE" | jq -r '.files."meals.json".raw_url')"
+            echo "Create response: $RESPONSE"
+            
+            # Extract HTTP code and response body
+            HTTP_CODE=$(echo "$RESPONSE" | grep -o "HTTP_CODE:[0-9]*" | cut -d: -f2)
+            BODY=$(echo "$RESPONSE" | sed 's/HTTP_CODE:[0-9]*$//')
+            
+            echo "HTTP Code: $HTTP_CODE"
+            echo "Response Body: $BODY"
+            
+            if [ "$HTTP_CODE" = "201" ]; then
+              NEW_GIST_ID=$(echo "$BODY" | jq -r .id)
+              RAW_URL=$(echo "$BODY" | jq -r '.files."meals.json".raw_url')
+              echo "✅ Success! New Gist ID: $NEW_GIST_ID"
+              echo "✅ Raw URL: $RAW_URL"
+              echo "💡 Set GIST_ID variable to: $NEW_GIST_ID"
+            else
+              echo "❌ Failed with HTTP $HTTP_CODE"
+              echo "Error details: $BODY"
+            fi
           fi
