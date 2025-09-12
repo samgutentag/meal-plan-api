@@ -1,142 +1,54 @@
-name: Update Meals
+name: Update Meals Gist
 
 on:
   schedule:
-    # Run every 12 hours at 5 minutes past the hour
-    - cron: '5 */12 * * *'
-  workflow_dispatch: # Allow manual runs
+    - cron: "5 */12 * * *"
+  workflow_dispatch:
 
 permissions:
-  contents: read  # Changed from write since we're not modifying repo
+  contents: read
+  gists: write
 
 jobs:
-  update-meals:
+  update-gist:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-        
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        
-    - name: Run meal planning script
-      env:
-        ICAL_URL: ${{ secrets.ICAL_URL }}
-      run: python app.py
-      
-    - name: Update or Create Gist
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GIST_ID: ${{ vars.GIST_ID }}  # Optional: store existing gist ID as repository variable
-      run: |
-        # Debug: Check if meals.json exists and show its content
-        if [ ! -f "meals.json" ]; then
-          echo "Error: meals.json file not found!"
-          exit 1
-        fi
-        
-        echo "meals.json content:"
-        cat meals.json
-        echo "---"
-        
-        # Read and prepare the JSON content
-        MEALS_CONTENT=$(cat meals.json | jq -c .)  # Compact JSON format
-        echo "Prepared content length: ${#MEALS_CONTENT} characters"
-        
-        # Create the payload file to avoid command line issues
-        cat > gist_payload.json << EOF
-{
-  "description": "Meal planning data - Updated every 12 hours",
-  "public": true,
-  "files": {
-    "meals.json": {
-      "content": $(echo "$MEALS_CONTENT" | jq -R .)
-    }
-  }
-}
-EOF
-        
-        echo "Payload created:"
-        cat gist_payload.json
-        echo "---"
-        
-        # Check if GIST_ID is set and gist exists
-        if [ -n "$GIST_ID" ]; then
-          echo "Checking if gist $GIST_ID exists..."
-          GIST_CHECK=$(curl -s -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
-             "https://api.github.com/gists/$GIST_ID")
-          HTTP_CODE="${GIST_CHECK: -3}"
-          
-          if [ "$HTTP_CODE" = "200" ]; then
-            echo "Updating existing gist: $GIST_ID"
-            # Create update payload
-            cat > update_payload.json << EOF
-{
-  "files": {
-    "meals.json": {
-      "content": $(echo "$MEALS_CONTENT" | jq -R .)
-    }
-  }
-}
-EOF
-            RESPONSE=$(curl -s -X PATCH \
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate meals data
+        env:
+          ICAL_URL: ${{ secrets.ICAL_URL }}
+        run: python app.py
+
+      - name: Create/Update Gist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIST_ID: ${{ vars.GIST_ID }}
+        run: |
+          CONTENT=$(cat meals.json | jq -c . | jq -R .)
+
+          if [ -n "$GIST_ID" ]; then
+            # Update existing gist
+            curl -X PATCH \
               -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
               "https://api.github.com/gists/$GIST_ID" \
-              -d @update_payload.json)
-            echo "Update response: $RESPONSE"
+              -d "{\"files\":{\"meals.json\":{\"content\":$CONTENT}}}"
           else
-            echo "Gist $GIST_ID not found (HTTP: $HTTP_CODE), creating new one..."
-            GIST_ID=""  # Clear to trigger creation
+            # Create new gist
+            RESPONSE=$(curl -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/gists" \
+              -d "{\"public\":true,\"files\":{\"meals.json\":{\"content\":$CONTENT}}}")
+            
+            echo "New Gist ID: $(echo "$RESPONSE" | jq -r .id)"
+            echo "Raw URL: $(echo "$RESPONSE" | jq -r '.files."meals.json".raw_url')"
           fi
-        fi
-        
-        # Create new gist if no valid existing one
-        if [ -z "$GIST_ID" ]; then
-          echo "Creating new gist..."
-          RESPONSE=$(curl -s -X POST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/gists" \
-            -d @gist_payload.json)
-          
-          echo "Create response: $RESPONSE"
-          
-          # Check if response contains an error
-          if echo "$RESPONSE" | jq -e '.message' > /dev/null 2>&1; then
-            echo "Error creating gist:"
-            echo "$RESPONSE" | jq '.message'
-            echo "Full response: $RESPONSE"
-            exit 1
-          fi
-          
-          # Extract and display the new gist information
-          NEW_GIST_ID=$(echo "$RESPONSE" | jq -r '.id // "null"')
-          GIST_URL=$(echo "$RESPONSE" | jq -r '.html_url // "null"')
-          RAW_URL=$(echo "$RESPONSE" | jq -r '.files."meals.json".raw_url // "null"')
-          
-          echo "Created new gist!"
-          echo "Gist ID: $NEW_GIST_ID"
-          echo "Gist URL: $GIST_URL" 
-          echo "Raw JSON URL: $RAW_URL"
-          
-          if [ "$NEW_GIST_ID" != "null" ]; then
-            echo "✅ Success! Save this Gist ID as a repository variable named 'GIST_ID': $NEW_GIST_ID"
-          else
-            echo "❌ Failed to create gist. Check the response above for errors."
-            exit 1
-          fi
-        fi
-        
-        # Cleanup
-        rm -f gist_payload.json update_payload.json
