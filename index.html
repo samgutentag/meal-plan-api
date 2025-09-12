@@ -1,63 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Plan API</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .endpoint {
-            background: #f6f8fa;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid #0366d6;
-            margin: 20px 0;
-        }
-        code {
-            background: #f1f1f1;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-        }
-        .example {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .endpoint {
+        background: #f6f8fa;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 4px solid #0366d6;
+        margin: 20px 0;
+      }
+      code {
+        background: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+      }
+      .example {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>🍽️ Meal Plan API</h1>
-    
-    <p>A simple API that serves meal planning data from Google Calendar as JSON.</p>
-    
-    <h2>API Endpoint</h2>
+    <p>
+      A Python-powered workflow that fetches meal planning data from Google
+      Calendar and publishes it as JSON to a GitHub Gist.
+    </p>
+
+    <h2>Meal Data Endpoint</h2>
     <div class="endpoint">
-        <strong>GET</strong> <code>/meals.json</code>
+      <strong>GET</strong>
+      <code
+        >https://gist.githubusercontent.com/yourusername/YOUR_GIST_ID/raw/meals.json</code
+      >
     </div>
-    
+    <p>
+      The meal plan data is published to a private (or public) GitHub Gist as
+      <code>meals.json</code>.<br />
+      <strong>Note:</strong> If your Gist is private, you will need to
+      authenticate with a GitHub token to access it programmatically.
+    </p>
+
     <h2>Response Format</h2>
-    <p>The API returns a JSON object with day indices (0-6) as keys:</p>
+    <p>The Gist returns a JSON object with day indices (0-6) as keys:</p>
     <ul>
-        <li><code>0</code> = Monday</li>
-        <li><code>1</code> = Tuesday</li>
-        <li><code>2</code> = Wednesday</li>
-        <li><code>3</code> = Thursday</li>
-        <li><code>4</code> = Friday</li>
-        <li><code>5</code> = Saturday</li>
-        <li><code>6</code> = Sunday</li>
+      <li><code>0</code> = Monday</li>
+      <li><code>1</code> = Tuesday</li>
+      <li><code>2</code> = Wednesday</li>
+      <li><code>3</code> = Thursday</li>
+      <li><code>4</code> = Friday</li>
+      <li><code>5</code> = Saturday</li>
+      <li><code>6</code> = Sunday</li>
     </ul>
-    
+
     <h2>Example Response</h2>
     <div class="example">
-        <pre><code>{
+      <pre><code>{
   "0": {
     "Breakfast": "",
     "KidLunch": "SunButter Energy Bites",
@@ -70,23 +82,56 @@
     "Lunch": "Crispy Cabbage Pancakes",
     "Dinner": "Chicken Tikka Masala"
   }
-}</code></pre>
+}
+</code></pre>
     </div>
-    
+
     <h2>Usage</h2>
-    <p>Once deployed, your API will be available at:</p>
+    <p>
+      You can fetch the meal data directly from the Gist raw URL (public Gists),
+      or via the GitHub API (for private Gists):
+    </p>
     <div class="endpoint">
-        <code>https://yourusername.github.io/meal-plan-api/meals.json</code>
+      <code
+        >https://gist.githubusercontent.com/yourusername/YOUR_GIST_ID/raw/meals.json</code
+      >
     </div>
-    
+    <p>For private Gists, use:</p>
+    <div class="example">
+      <pre><code>curl -H "Authorization: token YOUR_GIST_TOKEN" \
+     https://api.github.com/gists/YOUR_GIST_ID</code></pre>
+    </div>
+
     <h2>Meal Times</h2>
     <ul>
-        <li><strong>Breakfast:</strong> 8 AM</li>
-        <li><strong>KidLunch:</strong> 11 AM</li>
-        <li><strong>Lunch:</strong> 12 PM</li>
-        <li><strong>Dinner:</strong> 5 PM</li>
+      <li><strong>Breakfast:</strong> 8 AM</li>
+      <li><strong>KidLunch:</strong> 11 AM</li>
+      <li><strong>Lunch:</strong> 12 PM</li>
+      <li><strong>Dinner:</strong> 5 PM</li>
     </ul>
-    
-    <p><em>Updated daily via GitHub Actions</em></p>
-</body>
-</html> 
+
+    <h2>Automation</h2>
+    <p>
+      <em
+        >The meal plan Gist is updated daily via GitHub Actions. The workflow
+        runs the script, fetches the latest data from Google Calendar, and
+        publishes it to the Gist.</em
+      >
+    </p>
+
+    <h2>Environment Variables</h2>
+    <ul>
+      <li>
+        <code>ICAL_URL</code>: Your Google Calendar ICS feed URL (required)
+      </li>
+      <li>
+        <code>GIST_TOKEN</code>: GitHub token with <code>gist</code> scope
+        (required for private Gists or updating)
+      </li>
+      <li>
+        <code>GIST_ID</code>: ID of the Gist to update (optional; if not set, a
+        new Gist will be created)
+      </li>
+    </ul>
+  </body>
+</html>
