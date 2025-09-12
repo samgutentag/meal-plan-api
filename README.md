@@ -2,7 +2,7 @@
 
 A simple API that fetches meal planning data from a Google Calendar ICS feed and serves it as JSON.
 
-Checkout this weeks Menu at the endpoint [https://samgutentag.github.io/meal-plan-api/meals.json](https://samgutentag.github.io/meal-plan-api/meals.json)
+Meal data is now published to a private GitHub Gist instead of a local file in the repository.
 
 ## Features
 
@@ -23,18 +23,23 @@ Checkout this weeks Menu at the endpoint [https://samgutentag.github.io/meal-pla
    ```bash
    pip install -r requirements.txt
    ```
-3. Create a `.env` file with your Google Calendar ICS URL:
-   ```
-   ICAL_URL=https://calendar.google.com/calendar/ical/YOUR_CALENDAR_ID/basic.ics
-   ```
+3. Create a `.env` file with your Google Calendar ICS URL and Gist credentials:
+
+```
+ICAL_URL=https://calendar.google.com/calendar/ical/YOUR_CALENDAR_ID/basic.ics
+GIST_TOKEN=your_github_token_with_gist_scope
+GIST_ID=your_gist_id   # (optional, if you want to update an existing Gist)
+```
+
 4. Run the script:
-   ```bash
-   python app.py
-   ```
+
+```bash
+python app.py
+```
 
 ## Output Format
 
-The script generates a `meals.json` file with the following structure:
+The script writes the meal data to a GitHub Gist as `meals.json` with the following structure:
 
 ```json
 {
@@ -83,25 +88,33 @@ The `"today"` key contains meal information for the current day only, including:
 
 ## GitHub Actions Workflow
 
-The repository includes a GitHub Actions workflow that runs the script daily and commits the updated `meals.json` file.
+The repository can include a GitHub Actions workflow that runs the script daily and updates the Gist with the latest meal data. The workflow should provide the required environment variables (`ICAL_URL`, `GIST_TOKEN`, and optionally `GIST_ID`).
 
 ## Usage as API
 
-This repository is configured to serve the `meals.json` file as a static API endpoint via GitHub Pages.
+You can access the meal data directly from the Gist URL. If the Gist is public, you can use the raw URL as an API endpoint. If the Gist is private, you will need to authenticate with your GitHub token to access the data programmatically.
 
-### Setup GitHub Pages
+### Example: Fetching the Gist
 
-1. Go to your repository Settings → Pages
-2. Under "Source", select "Deploy from a branch"
-3. Choose the `main` branch
-4. Click "Save"
+> [!IMPORTANT]
+> Make sure your gist is set to **public** if you want others to access it.
+> When creating a gist for the first time, it is often set to **private** by default.
 
-Your API will be available at:
-`https://yourusername.github.io/meal-plan-api/meals.json`
+To fetch the latest meal data from your Gist:
 
-### Alternative Hosting
+```
+curl -H "Authorization: token YOUR_GIST_TOKEN" \
+  https://api.github.com/gists/YOUR_GIST_ID
+```
 
-You can also serve the `meals.json` file using other static hosting services:
+Or use the raw URL for the `meals.json` file in your Gist (public Gists only):
+
+```
+https://gist.githubusercontent.com/yourusername/YOUR_GIST_ID/raw/meals.json
+```
+
+> [!TIP]
+> Checkout my live gist at [https://gist.github.com/samgutentag/06b4abe6ee041f6fa90a793508f3adf7](https://gist.github.com/samgutentag/06b4abe6ee041f6fa90a793508f3adf7)
 
 ## TRMNL E-Ink Display Layouts
 
@@ -128,3 +141,5 @@ The `trmnl/` directory contains layout files designed for use with e-ink display
 ## Environment Variables
 
 - `ICAL_URL`: Your Google Calendar ICS feed URL (required)
+- `GIST_TOKEN`: GitHub token with `gist` scope (required)
+- `GIST_ID`: ID of the Gist to update (optional; if not set, a new Gist will be created)
