@@ -13,10 +13,10 @@ jobs:
   update-meals:
     runs-on: ubuntu-latest
 
-    # Option A: set env for the whole job (every step gets it)
     env:
       ICAL_URL: ${{ secrets.ICAL_URL }}
       GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+      GIST_ID: ${{ secrets.GIST_ID }} # optional
 
     steps:
       - name: Checkout repository
@@ -32,23 +32,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Optional masked sanity check (won't print the token)
-      - name: Verify env presence (masked)
-        run: |
-          python - <<'PY'
-          import os, sys
-          assert os.getenv("GIST_TOKEN"), "GIST_TOKEN missing"
-          assert os.getenv("ICAL_URL"), "ICAL_URL missing"
-          print("Env looks good ✅")
-          PY
-
       - name: Run meal planning script
         run: python app.py
 
-      - name: Commit and push changes
+      - name: Commit and push changes (skip if no file)
         run: |
+          FILE_PATH="meals.json"
+          if [ ! -f "$FILE_PATH" ]; then
+            echo "No $FILE_PATH found. Skipping commit."
+            exit 0
+          fi
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add meals.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update meals.json"
+          git add "$FILE_PATH"
+          git diff --cached --quiet && { echo "No changes to commit."; exit 0; }
+          git commit -m "Update meals.json"
           git push
