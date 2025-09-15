@@ -34,17 +34,3 @@ jobs:
 
       - name: Run meal planning script
         run: python app.py
-
-      - name: Commit and push changes (skip if no file)
-        run: |
-          FILE_PATH="meals.json"
-          if [ ! -f "$FILE_PATH" ]; then
-            echo "No $FILE_PATH found. Skipping commit."
-            exit 0
-          fi
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add "$FILE_PATH"
-          git diff --cached --quiet && { echo "No changes to commit."; exit 0; }
-          git commit -m "Update meals.json"
-          git push
