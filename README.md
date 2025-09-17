@@ -114,7 +114,7 @@ https://gist.githubusercontent.com/yourusername/YOUR_GIST_ID/raw/meals.json
 ```
 
 > [!TIP]
-> Checkout my live gist at [https://gist.github.com/samgutentag/06b4abe6ee041f6fa90a793508f3adf7](https://gist.github.com/samgutentag/06b4abe6ee041f6fa90a793508f3adf7)
+> Checkout my live gist at [https://gist.github.com/samgutentag/62b60125077a9cb53ea81ba517262185](https://gist.github.com/samgutentag/62b60125077a9cb53ea81ba517262185)
 
 ## TRMNL E-Ink Display Layouts
 
