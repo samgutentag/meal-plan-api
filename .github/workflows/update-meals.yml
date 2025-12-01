@@ -2,7 +2,8 @@ name: Update Meals
 
 on:
   schedule:
-    - cron: "5 */12 * * *"
+    # At 03:07 on Sunday, Tuesday, Thursday, and Saturday.
+    - cron: "7 3 * * 0,2,4,6"
   workflow_dispatch:
 
 permissions:
