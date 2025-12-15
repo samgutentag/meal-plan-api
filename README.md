@@ -1,5 +1,8 @@
 # Meal Plan API
 
+> [!TIP]
+> Checkout my live gist at [https://gist.github.com/samgutentag/62b60125077a9cb53ea81ba517262185](https://gist.github.com/samgutentag/62b60125077a9cb53ea81ba517262185)
+
 A simple API that fetches meal planning data from a Google Calendar ICS feed and serves it as JSON.
 
 Meal data is now published to a private GitHub Gist, instead of a local file in the repository.
